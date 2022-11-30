@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 		                            "json:target/cucumber-reports/cucumber.json"},
                  features="/Users/jay/Downloads/Framework/CucumberFramework/resources/SalesForceLogin.feature",
                  glue= {"com.training.steps"},
-                 tags = "@TC12")
+                 tags = "@TC8")
 
 public class Runner {
 

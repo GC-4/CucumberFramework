@@ -125,7 +125,22 @@ public class Steps extends BaseTest{
 	}
 	
 	
+	@When("User Clicks on DropDown {string}")
+	public void user_clicks_on_drop_down(String logicalName) {
+	   page.clickonButton(logicalName);
+	}
 	
+	@Then("User varifies the displayed table {string}")
+	public void user_varifies_the_displayed_table(String logicalName) {
+	    page.isDisplayed(logicalName);
+	}
+	
+	@When("User switches to child window")
+	public void user_switches_to_child_window() {
+	    page.switchToChildWindow();
+	}
+
+
 	
 	
 	

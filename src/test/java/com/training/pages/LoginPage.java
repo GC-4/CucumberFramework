@@ -68,6 +68,42 @@ public class LoginPage extends BasePage{
 	addObject("MergedAccView", By.id("hotlist_mode"));
 	
 	
+	//Account Tab - Account with activity >30 days
+	addObject("MoreThan30Days", By.partialLinkText("activity > 30 days"));
+	addObject("DateField", By.id("ext-gen20"));
+	addObject("CreatedDate", By.xpath("//div[contains(text(), 'Created Date' )]"));
+	addObject("From", By.id("ext-gen152"));
+	addObject("FromToday", By.xpath("//table[@id = 'ext-comp-1112']/tbody/tr[2]/td[2]/em/button"));
+	addObject("To", By.id("ext-gen154"));
+	addObject("ToToday", By.xpath("//table[@id = 'ext-comp-1114']/tbody/tr[2]/td[2]/em/button"));
+	addObject("AccountsTable", By.id("ext-gen263"));
+	addObject("unSave", By.id("ext-gen49"));
+	addObject("ReportName", By.id("saveReportDlg_reportNameField"));
+	addObject("ReportUniqueName", By.id("saveReportDlg_DeveloperName"));
+	addObject("SaveAndRun", By.id("ext-gen332"));
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+	
+	
+		
+		
+			
+		
+	
+	
+	
 	
 	
 	

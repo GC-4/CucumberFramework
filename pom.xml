@@ -61,8 +61,8 @@
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId> <!-- plug 1: to run the runner file-->
-				<version>2.19</version>
+				<artifactId>maven-surefire-plugin</artifactId> <!-- plugin 1: to run the runner file-->
+				<version>2.19.1</version>
 				<configuration>
 					<testFailureIgnore>true</testFailureIgnore>
 					<includes>

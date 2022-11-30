@@ -163,6 +163,30 @@ Then User varifies Title "Accounts: Home"
 And selects option from DropDown "MergedAccView" "Recently Viewed"
  
 
+@TC14 @CreateAccount
+Scenario: Goto accounts tab and merge two accounts
+Given User is on "LoginPage"
+When User enter into text box "Username" "gc@xyz.com"
+And User enter into text box "Password" "Myra@123" 
+Then User Clicks on Button "Login"
+When User Clicks on link "Accounts"
+Then User varifies Title "Accounts" 
+And User Clicks on link "MoreThan30Days"
+Then User varifies Title "Unsaved Report"
+When User Clicks on DropDown "DateField"
+And User Clicks on link "CreatedDate"
+When User Clicks on Button "From"
+And User Clicks on Button "FromToday"
+When User Clicks on Button "To"
+And User Clicks on Button "ToToday"
+Then User varifies the displayed table "AccountsTable"
+When User Clicks on Button "unSave"
+And User switches to child window
+When User enter into text box "ReportName" "Three"
+When User enter into text box "ReportUniqueName" "Threee"
+And User Clicks on Button "SaveAndRun"
+Then User varifies Title "Three"
+
 
 
 

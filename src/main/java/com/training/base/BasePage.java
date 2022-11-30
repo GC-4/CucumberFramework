@@ -93,6 +93,7 @@ public class BasePage {
 	 * window=getAllWindows.toArray(new String[getAllWindows.size()]);
 	 * driver.switchTo().window(window[1]).close(); }
 	 */
+	String pWindow = driver.getWindowHandle();
 	
 	for (String winHandle : driver.getWindowHandles())
 	{ 
@@ -137,7 +138,21 @@ public class BasePage {
 		varifyDropDownOptions(element,option0,option1,option2,option3,option4);
 	}
 	
+	public void isDisplayed(String logicalName) {
+		WebElement element = getWebElement(logicalName);
+		isDisplayed(element);
+	}
 	
+	
+	public void switchToChildWindow() {
+		int i = 1;
+		for (String winHandle : driver.getWindowHandles())
+		{ 
+			driver.switchTo().window(winHandle); 
+			System.out.println(i + " "+ winHandle);
+			i++;
+			}
+	}
 	
 
 	
@@ -167,6 +182,13 @@ public class BasePage {
 		WebDriverWait wait = new WebDriverWait(driver,50);
 		wait.until(ExpectedConditions.visibilityOf(element));	
 	}
+	
+	private void waitforClickable(WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver,50);
+		wait.until(ExpectedConditions.elementToBeClickable(element));	
+	}
+	
+	
 	
 	private void waitForTitle(String title){
 		WebDriverWait wait = new WebDriverWait(driver, 50);
@@ -276,6 +298,16 @@ public class BasePage {
 		else {
 			element.click();
 			System.out.println("Pass: "+btnTitle + " is selected" );}
+	}
+
+	
+
+	private void isDisplayed(WebElement element) {
+		if(element.isDisplayed()){
+			System.out.println("Table is displayed");}
+		else{
+			System.out.println("Table is not displayed");}
+		
 	}
 
 	

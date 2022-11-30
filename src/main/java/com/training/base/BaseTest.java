@@ -27,7 +27,7 @@ public class BaseTest {
 		if(driver==null) {
 			WebDriverManager.chromedriver().setup();
 			driver= new ChromeDriver();
-			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		}
 		 return driver;
 	}
